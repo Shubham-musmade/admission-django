@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 admin.site.site_header = "Shubham Admin"
 admin.site.site_title = "Shubham Admin Portal"
@@ -31,4 +33,4 @@ urlpatterns = [
     path('pri_admission/', include('home.urls')),
     path('reclass/', include('home.urls')),
     path('apointment/', include('home.urls')), 
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
