@@ -33,4 +33,4 @@ urlpatterns = [
     path('pri_admission/', include('home.urls')),
     path('reclass/', include('home.urls')),
     path('apointment/', include('home.urls')), 
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
