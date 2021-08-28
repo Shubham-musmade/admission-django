@@ -77,8 +77,14 @@ WSGI_APPLICATION = 'application.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dali8hvs2j49t0',
+        'HOST': 'ec2-35-153-91-18.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'tgsaapresheecr',
+        'PASSWORD': 'fd1cbed6aa0ab7357be429e165fcf8ddac9d9e232d3e71d86fe58aac017e8e38'
+
+# postgres://tgsaapresheecr:fd1cbed6aa0ab7357be429e165fcf8ddac9d9e232d3e71d86fe58aac017e8e38@ec2-35-153-91-18.compute-1.amazonaws.com:5432/dali8hvs2j49t0
     }
 }
 
