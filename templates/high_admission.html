@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block title %}High School Admission{% endblock title %}
+
+{% block body %}
+
+<div class="container-fluid my-0 px-0">
+	<img src="/static/img/contact/high.jpeg">
+</div>
+<div>
+<h3 class="text-center py-4">Highschool Admission Form</h1>
+</div>
+<p class="text-center"> from <strong>{{request.user}}</strong></p>
+<div class="container" action="/contact">
+<form method="post">
+{% csrf_token %}
+  <div class="form-group">
+    <label for="Name">Name</label>
+    <input type="text" class="form-control" id="student_name" name="student_name" placeholder="Name">
+  </div>
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="student_email" name="student_email" placeholder="Enter your Email ID">
+  </div>
+  <div class="form-group">
+    <label for="phone_no">Phone Number</label>
+    <input type="phone" class="form-control" id="student_phone_no" name="student_phone_no" placeholder="Enter your Phone Number">
+  </div>
+  <div class="form-group">
+    <label for="previous">Previous Class</label>
+    <input type="phone" class="form-control" id="student_class" name="student_class" placeholder="previous class">
+  </div>
+ 
+  <div class="form-group">
+    <label for="text_area">For What purpose do you want to contact</label>
+    <textarea class="form-control" id="student_text_area" name="student_text_area" rows="3"></textarea>
+  </div>
+  <div class="container text-center my-1">
+  <button class="btn btn-outline-secondary text-Dark" type="submit">Submit</button>
+  </div>
+</form>	
+</div>
+
+
+{% endblock body %}

@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% block title %}Sign Up{% endblock title %}
+
+{% block body %}
+
+ <div class="container text-center my-5">
+        <form class="form-signin" method="post" action="/sign_up/">
+            {% csrf_token %}
+
+            <img class="mb-4" src="/static/img/logo/login.png" alt="" width="72"
+            height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Sign Up</h1>        
+
+            <label for="username" class="sr-only">Username</label>
+            <input type="text" id="inputEmail" style="
+                border-radius: 50px;" name="username" class="form-control" placeholder="Username" required autofocus>
+
+            <label for="firstname" class="sr-only">First name</label>
+            <input type="text" id="inputEmail" style="
+                border-radius: 50px;" name="firstname" class="form-control" placeholder="Firstname" required autofocus>
+
+            <label for="lastname" class="sr-only">Last name</label>
+            <input type="text" id="lastname" style="
+                border-radius: 50px;" name="lastname" class="form-control" placeholder="Lastname" required autofocus>
+           
+           <label for="email" class="sr-only">Email</label>
+            <input type="email" id="email" style="
+                border-radius: 50px;" name="email" class="form-control" placeholder="Email" required autofocus>
+
+            <label for="inputPassword1" class="sr-only">Password</label>
+            <input type="password" style="
+                border-radius: 50px;" id="inputPassword1" name="password1" class="form-control" placeholder="Password" required>
+
+            {% comment %} <label for="inputPassword2" class="sr-only">Re-enter Password</label>
+            <input type="password" style="
+                border-radius: 50px;" id="inputPassword2" name="password2" class="form-control" placeholder="Re-enter Password" required> {% endcomment %}
+           
+            <button class="btn btn-lg btn-primary btn-block" style="
+                border-radius: 50px;" type="submit">Sign Up</button>
+        </form>
+    </div>
+
+{% endblock body %}
